@@ -1,6 +1,6 @@
-# Alphabets
+# The **Coq** model of an alphabet
 
-The **Coq** model of an alphabet
+**Authors:** *G. Zholtkevych*, *A. Zozulia*
 
 **Files:**
 
