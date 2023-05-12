@@ -1,0 +1,7 @@
+-R . Alphabets
+-arg -w
+-arg all
+Definitions.v
+Facts.v
+Examples.v
+
