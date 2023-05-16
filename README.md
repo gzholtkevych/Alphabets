@@ -6,7 +6,7 @@
 
 > *README.md* is this file
 > 
-> *Definitions.v* contains the basic definitions
+> *Concepts.v* contains the basic definitions
 > 
 > *Examples.v* contains important examples of alphabets
 > 
