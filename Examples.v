@@ -1,4 +1,4 @@
-Require Import Alphabets.Definitions.
+Require Import Alphabets.Concepts.
 Import ListNotations.
 
 
