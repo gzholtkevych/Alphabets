@@ -1,0 +1,41 @@
+DIGEST e4e7292c83fddd1d4effeae2e3e39859
+FAlphabets.Concepts
+R15:18 Coq.Unicode.Utf8 <> <> lib
+R36:45 Coq.Lists.List <> <> lib
+R55:67 Coq.Lists.List ListNotations <> mod
+modtype 84:96 <> ALPHABET_CORE
+ax 111:116 ALPHABET_CORE letter
+def 138:142 ALPHABET_CORE chain
+R147:150 Coq.Init.Datatypes <> list ind
+R152:157 Alphabets.Concepts ALPHABET_CORE letter defax
+ax 172:181 ALPHABET_CORE fin_letter
+R185:185 Coq.Init.Specif <> ::type_scope:'{'_x_':'_x_'|'_x_'}' not
+R190:192 Coq.Init.Specif <> ::type_scope:'{'_x_':'_x_'|'_x_'}' not
+R198:200 Coq.Init.Specif <> ::type_scope:'{'_x_':'_x_'|'_x_'}' not
+R226:226 Coq.Init.Specif <> ::type_scope:'{'_x_':'_x_'|'_x_'}' not
+R193:197 Alphabets.Concepts ALPHABET_CORE chain def
+binder 186:189 <> enum:2
+R201:204 Coq.Unicode.Utf8_core <> ::type_scope:'∀'_x_'..'_x_','_x not
+R215:216 Coq.Unicode.Utf8_core <> ::type_scope:'∀'_x_'..'_x_','_x not
+R209:214 Alphabets.Concepts ALPHABET_CORE letter defax
+binder 205:205 <> a:3
+R217:218 Coq.Lists.List <> In def
+R222:225 Alphabets.Concepts <> enum:2 var
+R220:220 Alphabets.Concepts <> a:3 var
+ax 241:253 ALPHABET_CORE eq_dec_letter
+R257:260 Coq.Unicode.Utf8_core <> ::type_scope:'∀'_x_'..'_x_','_x not
+R273:274 Coq.Unicode.Utf8_core <> ::type_scope:'∀'_x_'..'_x_','_x not
+R267:272 Alphabets.Concepts ALPHABET_CORE letter defax
+binder 261:261 <> a:5
+R267:272 Alphabets.Concepts ALPHABET_CORE letter defax
+binder 263:263 <> b:6
+R275:275 Coq.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R281:285 Coq.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R293:293 Coq.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R277:279 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R276:276 Alphabets.Concepts <> a:5 var
+R280:280 Alphabets.Concepts <> b:6 var
+R287:291 Coq.Unicode.Utf8_core <> ::type_scope:x_'≠'_x not
+R286:286 Alphabets.Concepts <> a:5 var
+R292:292 Alphabets.Concepts <> b:6 var
+R300:312 Alphabets.Concepts ALPHABET_CORE <> modtype
