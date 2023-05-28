@@ -2,40 +2,33 @@ Require Import Alphabets.Concepts.
 Import ListNotations.
 
 
-Section Decidability.
-Variable A : Alphabet.
+Module ALPHABET_THEORY (M : ALPHABET_CORE).
+Include M.
 
-  Definition in_chain_dec : ∀ a (c : chain A), {In a c} + {¬ In a c}.
+  Definition in_chain_dec : ∀ (a : letter) c, {In a c} + {¬ In a c}.
   Proof.
     intros.
     induction c as [| h c' IHc'].
     - right. intro. inversion H.
-    - destruct (eq_neq_dec A a h) as [E | NE].
+    - destruct (eq_dec_letter a h) as [E | NE].
       + left. rewrite <- E. now left.
       + elim IHc'; intro H; [left | right ]; simpl.
         * now right.
         * intro H1. elim H1; intro H2; try symmetry in H2; contradiction.
   Defined.
 
-End Decidability.
-Arguments in_chain_dec {A}.
-
-
-Section Cardinality.
-Variable A : Alphabet.
-
-  Inductive nodup : chain A → Prop 
+  Inductive nodup : chain → Prop 
     := nil_nodup : nodup []
     |  cons_nodup : ∀ a c, ¬ In a c → nodup c → nodup (a :: c).
 
-  Fixpoint nocc (a : A) (c : chain A) : nat
+  Fixpoint nocc (a : letter) (c : chain) : nat
     := match c with
          []       => 0
        | a' :: c' => 
-           if eq_neq_dec A a a' then S (nocc a c') else nocc a c'
+           if eq_dec_letter a a' then S (nocc a c') else nocc a c'
        end.
 
-  Fixpoint remove_dup (c : chain A) : chain A
+  Fixpoint remove_dup (c : chain) : chain
     := match c with
          []      => []
        | a :: c' =>
@@ -44,8 +37,13 @@ Variable A : Alphabet.
            | _ => remove_dup c' end
        end.
 
-  Lemma nodup_without_dup : ∀ c : chain A, nodup c → remove_dup c = c.
+  Lemma nodup_without_dup : ∀ c : chain, nodup c → remove_dup c = c.
   Proof.
+    intros.
+    induction c as [| a s' IHc'].
+    - trivial.
+    - simpl in H. pose (nocc a c).
+      assert (H1 : n = 0). { destruct n. reflexivity. 
   Admitted.
 
   Lemma cardinal : ∀ e' e'' : {e : chain A | ∀ a : A, In a e},

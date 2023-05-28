@@ -3,10 +3,10 @@ Require Export Lists.List.
 Import ListNotations.
 
 
-Structure Alphabet := newAlphabet {
-  letter :> Set;
-  fin_evidence : {ls : list letter | ∀ a : letter, In a ls};
-  eq_neq_dec : ∀ a b : letter, {a = b} + {a ≠ b}
-}.
+Module Type ALPHABET_CORE.
+  Parameter letter : Set.
+  Definition chain := list letter.
+  Parameter fin_letter : {enum : chain | ∀ a : letter, In a enum}.
+  Parameter eq_dec_letter : ∀ a b : letter, {a = b} + {a ≠ b}.
+End ALPHABET_CORE.
 
-Definition chain (A : Alphabet) : Set := list (letter A).
